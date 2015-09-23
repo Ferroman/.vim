@@ -32,6 +32,9 @@ if count(g:vimified_packages, 'general')
 
     " console in buffers
     Plugin 'rosenfeld/conque-term'
+
+    " draw diagrams
+    Plugin 'vim-scripts/DrawIt'
 endif
 " }}}
 
@@ -39,7 +42,10 @@ endif
 if count(g:vimified_packages, 'coding')
 
    " Plugin for Git
+   Plugin 'Xuyuanp/nerdtree-git-plugin'
    Plugin 'tpope/vim-fugitive'
+   Plugin 'airblade/vim-gitgutter'
+
    " Plugin for mercurial
    " Plugin 'Lawrencium'
    " gitv is a 'gitk clone' plugin for the text editor Vim
@@ -67,6 +73,22 @@ if count(g:vimified_packages, 'coding')
 
    " Tagbar displays the tags of the current file in a sidebar.
    Plugin 'majutsushi/tagbar'
+
+   " Add smart aligment with space to line up test
+   Plugin 'godlygeek/tabular'
+
+   " Add markdown support 
+   Plugin 'plasticboy/vim-markdown'
+
+   " Add Dockerfile support
+   Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim'}
+
+   " Add nginx.conf syntax support
+   Plugin 'vim-scripts/nginx.vim'
+
+   " save session
+   Plugin 'tpope/vim-obsession'
+   Plugin 'dhruvasagar/vim-prosession'
 endif
 " }}}
 
@@ -96,7 +118,7 @@ endif
 " _. Lua {{{
 if count(g:vimified_packages, 'lua')
    Plugin 'vim-misc'
-   Plugin 'xolox/vim-lua-inspect'
+   "Plugin 'xolox/vim-lua-inspect'
 endif
 " }}}
 "
