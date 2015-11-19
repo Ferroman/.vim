@@ -65,16 +65,6 @@ let ropevim_vim_completion = 1
 let ropevim_extended_complete = 1
 let pymode_rope_autoimport_generate = 1
 
-" autocomplete by tags
-function! TabWrapperRope()
-  if strpart(getline('.'), 0, col('.')-1) =~ '^\s*$'
-    return "\<Tab>"
-  else
-    return "\<C-R>=RopeCodeAssistInsertMode()\<CR>"
-  endif
-endfunction
-
-au BufRead,BufNewFile *.py,*pyw imap <Tab> <C-R>=TabWrapperRope()<CR>
 au BufRead,BufNewFile *.py,*pyw nnoremap <C-c>o :RopeOrganizeImports<CR>0<CR><CR>
 au BufRead,BufNewFile *.py,*pyw nnoremap <C-c>i :RopeAutoImport<CR>
 " --------- Pylint

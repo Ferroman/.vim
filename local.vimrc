@@ -6,8 +6,8 @@ endif
 " }}}
 
 let s:rubyrc = expand($HOME . '/.vim/ruby.vimrc')
-if filereadable(s:pythonrc)
-    exec ':so ' . s:pythonrc
+if filereadable(s:rubyrc)
+    exec ':so ' . s:rubyrc
 endif
 " }}}
 
@@ -50,6 +50,8 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfil
 
 " Json
 au! BufRead,BufNewFile *.json setfiletype json 
+" json formatting
+command! -range -nargs=0 -bar JsonTool <line1>,<line2>!python -m json.tool
 
 "---------------------------------------------------------------------
 " gVim - related staff

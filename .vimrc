@@ -34,7 +34,7 @@ if count(g:vimified_packages, 'general')
     Plugin 'rosenfeld/conque-term'
 
     " draw diagrams
-    Plugin 'vim-scripts/DrawIt'
+    "Plugin 'vim-scripts/DrawIt'
 endif
 " }}}
 
@@ -68,7 +68,8 @@ if count(g:vimified_packages, 'coding')
 
    " A Vim plugin for visually displaying indent levels in code
    Plugin 'nathanaelkane/vim-indent-guides'
-   " Syntax for json
+   
+   " Syntax highlighting for JSON
    Plugin 'leshill/vim-json'
 
    " Tagbar displays the tags of the current file in a sidebar.
