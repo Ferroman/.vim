@@ -26,9 +26,6 @@ au BufRead,BufNewFile Makefile* set noexpandtab
 " Make trailing whitespace be flagged as bad.
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-" Wrap text after a certain number of characters
-"au BufRead,BufNewFile *.py,*.pyw set textwidth=120
-
 " Use UNIX (\n) line endings.
 " Only used for new files so as to not force existing files to change their
 " line endings.
@@ -65,8 +62,6 @@ let ropevim_vim_completion = 1
 let ropevim_extended_complete = 1
 let pymode_rope_autoimport_generate = 1
 
-au BufRead,BufNewFile *.py,*pyw nnoremap <C-c>o :RopeOrganizeImports<CR>0<CR><CR>
-au BufRead,BufNewFile *.py,*pyw nnoremap <C-c>i :RopeAutoImport<CR>
 " --------- Pylint
 "let g:PyLintCWindow = 1
 "let g:PyLintSigns = 1

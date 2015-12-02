@@ -37,7 +37,7 @@ set autoindent
 " Disable read-only protection
 set autoread
 
-" Change cursor in Inser mode (for Konsole in KDE4)
+" Change cursor in Insert mode (for Konsole in KDE4)
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
@@ -111,6 +111,12 @@ set fillchars=fold:-
 " Exit from insert mode
 imap jj <Esc>
 
+" Disable Ex mode hotkey
+:nnoremap Q <Nop>
+
+" Vim markdown folding
+let g:vim_markdown_folding_disabled=1
+
 "---------------------------------------------------------------------
 " completion
 "---------------------------------------------------------------------
@@ -161,7 +167,9 @@ let g:proj_flags = "imstg"
 "---------------------------------------------------------------------
 
 setlocal foldcolumn=1
-"set number
+
+" show line numbers
+set number
 
 " Save currnet buffer
 imap <F2> <Esc>:w<CR>a
@@ -180,7 +188,9 @@ set undodir=/tmp/
 set undofile
 set colorcolumn=80
 
-set relativenumber
+" Show line number relative to current position
+"set relativenumber
+
 " disable relativenumbers for NerdTree buffer
 autocmd FileType nerdtree setlocal norelativenumber
 
@@ -199,8 +209,8 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " --------- Ctrlp
 
-" Ignore archives, ycs, temp files and VCS dictionaries
-set wildignore+=*.pyc,*.orig,*.zip
+" Ignore ycs, temp files and VCS dictionaries
+set wildignore+=*.pyc,*.orig
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "---------------------------------------------------------------------
@@ -220,6 +230,7 @@ let g:haddock_browser = "/usr/bin/firefox"
 "---------------------------------------------------------------------
 
 " The Silver Searcher
+" silversearcher-ag package should be installed
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
