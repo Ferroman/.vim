@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible
 filetype off  " required!
 
@@ -35,6 +36,9 @@ if count(g:vimified_packages, 'general')
 
     " draw diagrams
     "Plugin 'vim-scripts/DrawIt'
+    
+    " create new directory with file
+    Plugin 'duggiefresh/vim-easydir'
 endif
 " }}}
 
@@ -87,6 +91,9 @@ if count(g:vimified_packages, 'coding')
    " Add nginx.conf syntax support
    Plugin 'vim-scripts/nginx.vim'
 
+   " auto-close quote/brracket etc.
+   Plugin 'Raimondi/delimitMate'
+
    " save session
    Plugin 'tpope/vim-obsession'
    Plugin 'dhruvasagar/vim-prosession'
@@ -131,8 +138,10 @@ endif
 
 " _. JavaScript {{{
 if count(g:vimified_packages, 'javascript')
+   Plugin 'jelera/vim-javascript-syntax'
    " Fork of bronson's vim-jquery which is now gone
    Plugin 'itspriddle/vim-jquery'
+   Plugin 'pangloss/vim-javascript'
    Plugin 'vim-coffee-script'
 endif
 " }}}
