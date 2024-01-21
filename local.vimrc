@@ -214,18 +214,6 @@ set wildignore+=*.pyc,*.orig
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "---------------------------------------------------------------------
-" Haskellmode params
-"---------------------------------------------------------------------
-
-" This assumes that ghc is in your path, if it is not, or you
-" wish to use a specific version of ghc, then please change
-" the ghc below to a full path to the correct one
-au Bufenter *.hs compiler ghc
-
-" configure browser for haskell_doc.vim
-let g:haddock_browser = "/usr/bin/firefox"
-
-"---------------------------------------------------------------------
 " Search and grep params
 "---------------------------------------------------------------------
 

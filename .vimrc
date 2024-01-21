@@ -33,12 +33,6 @@ if count(g:vimified_packages, 'general')
 
     " console in buffers
     Plugin 'rosenfeld/conque-term'
-
-    " draw diagrams
-    "Plugin 'vim-scripts/DrawIt'
-    
-    " create new directory with file
-    Plugin 'duggiefresh/vim-easydir'
 endif
 " }}}
 
